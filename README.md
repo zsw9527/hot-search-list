@@ -10,3 +10,6 @@
 - simple JS, HTML, CSS.
 - jdk version:11.
 - the front-end pages under the static directory can be deployed separately
+
+# example
+![avatar](./example.png)
