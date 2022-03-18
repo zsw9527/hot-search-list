@@ -1,4 +1,5 @@
-# HOT SEARCH NAVIGATION PAGE (AUTOMATICALLY AGGREGATES HOT SEARCH DATA OF THREE MAJOR WEBSITES).
+# Hot search navigation page 
+- Automatically aggregates hot search data of three major websites).
 
 # FEATURE LIST.
 - crawlers pull Sina hot search, headline hot search, Baidu hot search, and store them in the database.
