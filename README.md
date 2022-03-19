@@ -8,9 +8,10 @@
 
 # USING TECHNOLOGY.
 - SpringBoot.
-- simple JS, HTML, CSS.
+- simple JS,Layui.
 - jdk version:11.
-- the front-end pages under the static directory can be deployed separately
+- the front-end pages under the static directory can be deployed separately.
 
 # EXAMPLE
+- [Demo address](http://110.42.211.239:8085/index.html)
 ![avatar](./example.png)
