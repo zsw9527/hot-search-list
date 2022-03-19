@@ -1,92 +1,30 @@
 <!DOCTYPE html>
-<html>
-
+<!--新版UI-->
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>热搜导航</title>
+    <meta charset="UTF-8">
+    <title>热搜榜</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
 </head>
-
 <body>
-    <table width="100%" border="2" style="margin-top: 1%;">
-        <tr style="height: 50px;">
-            <td width="100%" colspan="3" style="background: url(img/bg.PNG)">
-                <div id="title" style="margin-left: 45%;">
-                    <h1 style="color: rgb(13, 14, 14);">热搜榜</h1>
-                </div>
-            </td>
-        </tr>
-        <tr style="height: 500px;">
-            <td colspan="1" width="30%" style="background-color:#f8f6f2;" valign="top">
-                <div id="baidu_img" style="padding-left: 20%;">
-                    <img src="img/baidu_logo.png"  width="170px" height="100px"/>
-                </div>
-                <div id="baidu" style="padding-left:20%; width: 350px;">
+<script src="./layui/layui.js"></script>
 
-                </div>
 
-            </td>
-            <td width="30%" colspan="1" style="background-color:#e6eeee;" valign="top">
-                <div id="toutiao_img" style="padding-left: 20%;">
-                    <img src="img/toutiao_logo.png"  width="150px" height="100px"/>
-                </div>
-                <div id="toutiao" style="padding-left:20%;width: 350px;">
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="width: 30%; margin-left: 33%">
+    <ul class="layui-tab-title">
+        <li class="layui-this">微博热搜 <img style="width: 25px; height: 25px" src="img/weibo_logo.png"></li>
+        <li>百度热搜 <img style="width: 40px; height: 25px" src="img/baidu_logo.png"></li>
+        <li>头条热搜 <img style="width: 25px; height: 25px" src="img/toutiao_logo.png"></li>
+    </ul>
+    <div class="layui-tab-content">
+        <div id="weibo" class="layui-tab-item layui-show"></div>
+        <div id="baidu" class="layui-tab-item"></div>
+        <div id="toutiao" class="layui-tab-item"></div>
+    </div>
+</div>
 
-                </div>
-            </td>
-            <td width="30%" colspan="1" style="background-color:#faf2f4;" valign="top">
-                <div id="weibo_img" style="padding-left: 20%;">
-                    <img src="img/weibo_logo.png"  width="130px" height="100px"/>
-                </div>
-                <div id="weibo" style="padding-left:20%; width: 350px;">
+<script src="js/index.js"></script>
 
-                </div>
-            </td>
-        </tr>
-    </table>
 
-    <div style="border: 1px solid #ccc; width: 10px;"></div>
-
-    <script>
-        //注意替换成实际后端服务器ip
-        var baiduUrl = "http://127.0.0.1:8085/hotSearch/baidu";
-        var weiboUrl = "http://127.0.0.1:8085/hotSearch/sina";
-        var toutiaoUrl = "http://127.0.0.1:8085/hotSearch/toutiao";
-
-        //从后端接口获取数据渲染到页面中
-        function getHotWord(name, url) {
-            var httpRequest = new XMLHttpRequest();
-
-            httpRequest.open('GET', url, true);
-            httpRequest.send();
-            /**
-             * 获取数据后的处理程序
-             */
-            httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                    var json = httpRequest.responseText;
-
-                    var obj = JSON.parse(json);
-
-                    var str = ""
-                    for (var i = 0; i < obj.length; ++i) {
-                        str += '<a style="text-decoration:none;color:black;" href=\"' + obj[i].url + '\">' + (i + 1) + '.' +  obj[i].word + '</a>';
-                        if (i <= 2) {
-                            //前三个热搜加上带火的图标
-                            str += '<img src="img/huo.png"  width="30px" height="30px"/>'
-                        } 
-                        //换行
-                        str += '<br><div style="border: 1px solid #ccc"></div><br>'
-                    }
-                    //console.log(str);
-                    document.getElementById(name).innerHTML = str;
-                }
-            };
-        }
-
-        getHotWord('baidu', baiduUrl);
-        getHotWord('weibo', weiboUrl);
-        getHotWord('toutiao', toutiaoUrl);
-    </script>
 </body>
-
 </html>
