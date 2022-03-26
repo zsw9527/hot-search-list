@@ -1,10 +1,13 @@
-package org.zsw.hot_search_list.entity.dto;
+package org.zsw.entity.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * @author zsw
+ */
 @Data
 @NoArgsConstructor
 public class ToutiaoApiRes {

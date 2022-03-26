@@ -1,9 +1,12 @@
-package org.zsw.hot_search_list.entity.dto;
+package org.zsw.entity.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author zsw
+ */
 @Data
 @NoArgsConstructor
 public class ToutiaoHotWord {

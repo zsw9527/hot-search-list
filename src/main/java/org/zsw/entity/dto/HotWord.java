@@ -1,4 +1,4 @@
-package org.zsw.hot_search_list.entity.dto;
+package org.zsw.entity.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,10 +11,14 @@ import lombok.Data;
 @AllArgsConstructor
 public class HotWord {
 
-    //热搜关键词
+    /**
+     * 热搜关键词
+     */
     private String word;
 
-    //点击关键词后跳转到的页面地址
+    /**
+     * 点击关键词后跳转到的页面地址
+     */
     private String url;
 
     public HotWord() {}

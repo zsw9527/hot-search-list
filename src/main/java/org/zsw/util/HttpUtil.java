@@ -1,4 +1,4 @@
-package org.zsw.hot_search_list.util;
+package org.zsw.util;
 
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
@@ -9,10 +9,13 @@ import org.springframework.util.CollectionUtils;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * @author zsw
+ */
 @Slf4j
 public class HttpUtil {
 
-    private static OkHttpClient okHttpClient = new OkHttpClient();
+    private static final OkHttpClient OK_HTTP_CLIENT = new OkHttpClient();
 
     public static String get(String url, Map<String, String> headers) {
         Request.Builder build = new Request.Builder()
@@ -29,7 +32,7 @@ public class HttpUtil {
         Request request = build.build();
 
         try {
-            Response res = okHttpClient.newCall(request).execute();
+            Response res = OK_HTTP_CLIENT.newCall(request).execute();
             if (res.isSuccessful()) {
                 return res.body().string();
             }

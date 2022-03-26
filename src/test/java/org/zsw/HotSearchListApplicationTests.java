@@ -1,4 +1,4 @@
-package org.zsw.hot_search_list;
+package org.zsw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

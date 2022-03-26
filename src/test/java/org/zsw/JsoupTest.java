@@ -1,19 +1,11 @@
-package org.zsw.hot_search_list;
+package org.zsw;
 
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.junit.jupiter.api.Test;
-import org.zsw.hot_search_list.crawler.BaiduCrawler;
-import org.zsw.hot_search_list.crawler.Crawler;
-import org.zsw.hot_search_list.crawler.SinaCrawler;
-import org.zsw.hot_search_list.crawler.ToutiaoCrawler;
-
-import java.io.IOException;
-import java.sql.SQLOutput;
-import java.util.Iterator;
+import org.zsw.crawler.BaiduCrawler;
+import org.zsw.crawler.Crawler;
+import org.zsw.crawler.SinaCrawler;
+import org.zsw.crawler.ToutiaoCrawler;
 
 public class JsoupTest {
 

@@ -1,4 +1,4 @@
-package org.zsw.hot_search_list.crawler;
+package org.zsw.crawler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
@@ -6,7 +6,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
-import org.zsw.hot_search_list.entity.dto.HotWord;
+import org.zsw.entity.dto.HotWord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +38,6 @@ public class BaiduCrawler implements Crawler {
 
                 resList.add(new HotWord(hotWord, jumpUrl));
             }
-
-            //baiduDao.insert(resList);
 
             return resList;
         } catch (Exception e) {
