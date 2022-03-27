@@ -21,7 +21,7 @@ import java.util.Map;
 @Slf4j
 public class ToutiaoCrawler implements Crawler {
 
-    private final String URL = "https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00901M8LjpgAAIDBkEhhQfZ9hhDPL4oAAFImxnrlR3Fg-cMemo62C6hsNU9GSx62jd1tC8fl6zpGxvIdK7LGEyPMNvJ0r3nc-F3fCJ-PPusWm93CE0wH6FxpuxVcvSg-RdD-NJeG96";
+    private final static String URL = "https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00901M8LjpgAAIDBkEhhQfZ9hhDPL4oAAFImxnrlR3Fg-cMemo62C6hsNU9GSx62jd1tC8fl6zpGxvIdK7LGEyPMNvJ0r3nc-F3fCJ-PPusWm93CE0wH6FxpuxVcvSg-RdD-NJeG96";
 
     @Override
     public List<HotWord> catchFromWeb() {

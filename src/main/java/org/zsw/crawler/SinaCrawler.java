@@ -19,9 +19,9 @@ import java.util.List;
 @Component
 public class SinaCrawler implements Crawler {
 
-    private final String URL = "https://s.weibo.com/top/summary";
+    private final static String URL = "https://s.weibo.com/top/summary";
 
-    private final String WEIBO_PRE = "https://s.weibo.com";
+    private final static String WEIBO_PRE = "https://s.weibo.com";
 
     @Override
     public List<HotWord> catchFromWeb() {

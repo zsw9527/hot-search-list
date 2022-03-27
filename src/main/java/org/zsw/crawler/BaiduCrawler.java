@@ -19,7 +19,7 @@ import java.util.List;
 @Component
 public class BaiduCrawler implements Crawler {
 
-    private final String URL = "https://top.baidu.com/board?tab=realtime";
+    private final static String URL = "https://top.baidu.com/board?tab=realtime";
 
     @Override
     public List<HotWord> catchFromWeb() {
