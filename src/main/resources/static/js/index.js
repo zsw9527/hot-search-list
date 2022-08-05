@@ -1,7 +1,7 @@
 //注意替换成实际后端服务器ip
-var baiduUrl = "http://110.42.211.239:8085/hotSearch/baidu";
-var weiboUrl = "http://110.42.211.239:8085/hotSearch/sina";
-var toutiaoUrl = "http://110.42.211.239:8085/hotSearch/toutiao";
+var baiduUrl = "http://127.0.0.1:8085/hotSearch/baidu";
+var weiboUrl = "http://127.0.0.1:8085/hotSearch/sina";
+var toutiaoUrl = "http://127.0.0.1:8085/hotSearch/toutiao";
 
 //从后端接口获取数据渲染到页面中
 function getHotWord(name, url) {
